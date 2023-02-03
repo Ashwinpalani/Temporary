@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration monitorInterval="30">
+    
+<Appenders>
+		<Console name="Console" target="SYSTEM_OUT">
+			<PatternLayout  charset="UTF-8" pattern="%d{HH:mm:ss.SSS} %-5level %logger{36}.%M() @%L : %msg%n" />
+			</Console>
+	<RollingRandomAccessFile  name="AsyncAppender">
+			<FileName>E:WeatherScheduler/local_logs/AppLog.log</FileName>
+			<FilePattern>E:WeatherScheduler/local_logs/logs/archive/%d{yyyy-MM-dd-hh}-%i.log.zip</FilePattern>
+			<PatternLayout  charset="UTF-8" pattern="%d{yyyy-MMM-dd HH:mm:ss a} %-5level %logger{36}.%M() @%L : %msg%n" />
+			<Policies>
+				<SizeBasedTriggeringPolicy size="10 MB" />
+			</Policies>
+			<DefaultRolloverStrategy max="100" />
+		</RollingRandomAccessFile >
+
+		<Async name="Async">
+            <AppenderRef ref="AsyncAppender"/>
+        </Async>
+	</Appenders>
+	<Loggers>
+		<Logger name="com.ta.weather" level="debug" additivity="false">
+			<AppenderRef ref="AsyncAppender" />
+			<AppenderRef ref="Console" />
+		</Logger>
+		<Root level="trace">
+			<AppenderRef ref="Console" />
+		</Root>
+	</Loggers>
+</Configuration>

@@ -1,0 +1,104 @@
+ SELECT 'UTC'::text AS timezone,
+    m.year_sk,
+    m.quarter_number,
+    m.month_number,
+    m.days_in_month,
+    m.weekdays_in_month,
+    d.day_dt,
+    d.day_of_month,
+    d.day_of_week_monday,
+    d.day_of_week_sunday,
+    d.day_of_year,
+    qh.hour_dt,
+    qh.half_hour_dt,
+    o.utc_dt AS quarter_hour_dt,
+    o.utc_sk AS local_quarter_hour_sk,
+    o.utc_sk AS utc_quarter_hour_sk
+   FROM fact.dim_timezone_offsets o
+     JOIN fact.dim_quarter_hours qh ON o.utc_sk = qh.quarter_hour_sk
+     JOIN fact.dim_days d ON qh.day_sk = d.day_sk
+     JOIN fact.dim_months m ON d.month_sk = m.month_sk
+UNION ALL
+ SELECT 'Europe/Dublin'::text AS timezone,
+    m.year_sk,
+    m.quarter_number,
+    m.month_number,
+    m.days_in_month,
+    m.weekdays_in_month,
+    d.day_dt,
+    d.day_of_month,
+    d.day_of_week_monday,
+    d.day_of_week_sunday,
+    d.day_of_year,
+    qh.hour_dt,
+    qh.half_hour_dt,
+    o.europe_dublin_dt AS quarter_hour_dt,
+    o.europe_dublin_sk AS local_quarter_hour_sk,
+    o.utc_sk AS utc_quarter_hour_sk
+   FROM fact.dim_timezone_offsets o
+     JOIN fact.dim_quarter_hours qh ON o.europe_dublin_sk = qh.quarter_hour_sk
+     JOIN fact.dim_days d ON qh.day_sk = d.day_sk
+     JOIN fact.dim_months m ON d.month_sk = m.month_sk
+UNION ALL
+ SELECT 'US/Eastern'::text AS timezone,
+    m.year_sk,
+    m.quarter_number,
+    m.month_number,
+    m.days_in_month,
+    m.weekdays_in_month,
+    d.day_dt,
+    d.day_of_month,
+    d.day_of_week_monday,
+    d.day_of_week_sunday,
+    d.day_of_year,
+    qh.hour_dt,
+    qh.half_hour_dt,
+    o.us_eastern_dt AS quarter_hour_dt,
+    o.us_eastern_sk AS local_quarter_hour_sk,
+    o.utc_sk AS utc_quarter_hour_sk
+   FROM fact.dim_timezone_offsets o
+     JOIN fact.dim_quarter_hours qh ON o.us_eastern_sk = qh.quarter_hour_sk
+     JOIN fact.dim_days d ON qh.day_sk = d.day_sk
+     JOIN fact.dim_months m ON d.month_sk = m.month_sk
+UNION ALL
+ SELECT 'Australia/Sydney'::text AS timezone,
+    m.year_sk,
+    m.quarter_number,
+    m.month_number,
+    m.days_in_month,
+    m.weekdays_in_month,
+    d.day_dt,
+    d.day_of_month,
+    d.day_of_week_monday,
+    d.day_of_week_sunday,
+    d.day_of_year,
+    qh.hour_dt,
+    qh.half_hour_dt,
+    o.australia_sydney_dt AS quarter_hour_dt,
+    o.australia_sydney_sk AS local_quarter_hour_sk,
+    o.utc_sk AS utc_quarter_hour_sk
+   FROM fact.dim_timezone_offsets o
+     JOIN fact.dim_quarter_hours qh ON o.australia_sydney_sk = qh.quarter_hour_sk
+     JOIN fact.dim_days d ON qh.day_sk = d.day_sk
+     JOIN fact.dim_months m ON d.month_sk = m.month_sk
+UNION ALL
+ SELECT 'Asia/Dubai'::text AS timezone,
+    m.year_sk,
+    m.quarter_number,
+    m.month_number,
+    m.days_in_month,
+    m.weekdays_in_month,
+    d.day_dt,
+    d.day_of_month,
+    d.day_of_week_monday,
+    d.day_of_week_sunday,
+    d.day_of_year,
+    qh.hour_dt,
+    qh.half_hour_dt,
+    o.asia_dubai_dt AS quarter_hour_dt,
+    o.asia_dubai_sk AS local_quarter_hour_sk,
+    o.utc_sk AS utc_quarter_hour_sk
+   FROM fact.dim_timezone_offsets o
+     JOIN fact.dim_quarter_hours qh ON o.asia_dubai_sk = qh.quarter_hour_sk
+     JOIN fact.dim_days d ON qh.day_sk = d.day_sk
+     JOIN fact.dim_months m ON d.month_sk = m.month_sk;

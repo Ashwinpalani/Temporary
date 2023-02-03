@@ -1,0 +1,207 @@
+{"properties": [
+  {
+    "name": "weather_endpoint",
+    "type": "java.lang.String",
+    "description": "A description for 'weather_endpoint'"
+  },
+  {
+    "name": "app.weather.api.key",
+    "type": "java.lang.String",
+    "description": "A description for 'app.weather.api.key'"
+  },
+  {
+    "name": "appid",
+    "type": "java.lang.String",
+    "description": "A description for 'appid'"
+  },
+  {
+    "name": "weather_map",
+    "type": "java.lang.String",
+    "description": "A description for 'weather_map'"
+  },
+  {
+    "name": "weatherEndPoint",
+    "type": "java.lang.String",
+    "description": "A description for 'weatherEndPoint'"
+  },
+  {
+    "name": "weatherEndPoint",
+    "type": "java.lang.String",
+    "description": "A description for 'weatherEndPoint'"
+  },
+  {
+    "name": "weatherEndPoint",
+    "type": "java.lang.String",
+    "description": "A description for 'weatherEndPoint'"
+  },
+  {
+    "name": "weatherEndPoint",
+    "type": "java.lang.String",
+    "description": "A description for 'weatherEndPoint'"
+  },
+  {
+    "name": "weatherMap",
+    "type": "java.lang.String",
+    "description": "A description for 'weatherMap'"
+  },
+  {
+    "name": "cronExpression",
+    "type": "java.lang.String",
+    "description": "A description for 'cronExpression'"
+  },
+  {
+    "name": "city",
+    "type": "java.lang.String",
+    "description": "A description for 'city'"
+  },
+  {
+    "name": "password",
+    "type": "java.lang.String",
+    "description": "A description for 'password'"
+  },
+  {
+    "name": "javax.persistence.schema-generation.database.action",
+    "type": "java.lang.String",
+    "description": "A description for 'javax.persistence.schema-generation.database.action'"
+  },
+  {
+    "name": "weatherMap",
+    "type": "java.lang.String",
+    "description": "A description for 'weatherMap'"
+  },
+  {
+    "name": "weatherMap",
+    "type": "java.lang.String",
+    "description": "A description for 'weatherMap'"
+  },
+  {
+    "name": "weatherMap",
+    "type": "java.lang.String",
+    "description": "A description for 'weatherMap'"
+  },
+  {
+    "name": "weatherMap",
+    "type": "java.lang.String",
+    "description": "A description for 'weatherMap'"
+  },
+  {
+    "name": "weatherMap",
+    "type": "java.lang.String",
+    "description": "A description for 'weatherMap'"
+  },
+  {
+    "name": "hbm2ddl.auto",
+    "type": "java.lang.String",
+    "description": "A description for 'hbm2ddl.auto'"
+  },
+  {
+    "name": "appid1",
+    "type": "java.lang.String",
+    "description": "A description for 'appid1'"
+  },
+  {
+    "name": "weatherEndPoint",
+    "type": "java.lang.String",
+    "description": "A description for 'weatherEndPoint'"
+  },
+  {
+    "name": "weatherEndPoint",
+    "type": "java.lang.String",
+    "description": "A description for 'weatherEndPoint'"
+  },
+  {
+    "name": "weatherEndPoint",
+    "type": "java.lang.String",
+    "description": "A description for 'weatherEndPoint'"
+  },
+  {
+    "name": "weatherEndPoint",
+    "type": "java.lang.String",
+    "description": "A description for 'weatherEndPoint'"
+  },
+  {
+    "name": "weatherMap",
+    "type": "java.lang.String",
+    "description": "A description for 'weatherMap'"
+  },
+  {
+    "name": "weatherMap",
+    "type": "java.lang.String",
+    "description": "A description for 'weatherMap'"
+  },
+  {
+    "name": "weatherMap",
+    "type": "java.lang.String",
+    "description": "A description for 'weatherMap'"
+  },
+  {
+    "name": "weatherEndPoint",
+    "type": "java.lang.String",
+    "description": "A description for 'weatherEndPoint'"
+  },
+  {
+    "name": "weatherEndPoint",
+    "type": "java.lang.String",
+    "description": "A description for 'weatherEndPoint'"
+  },
+  {
+    "name": "weatherEndPoint",
+    "type": "java.lang.String",
+    "description": "A description for 'weatherEndPoint'"
+  },
+  {
+    "name": "weatherEndPoint",
+    "type": "java.lang.String",
+    "description": "A description for 'weatherEndPoint'"
+  },
+  {
+    "name": "weatherEndPoint",
+    "type": "java.lang.String",
+    "description": "A description for 'weatherEndPoint'"
+  },
+  {
+    "name": "weatherEndPoint",
+    "type": "java.lang.String",
+    "description": "A description for 'weatherEndPoint'"
+  },
+  {
+    "name": "hibernate.hbm2ddl.auto",
+    "type": "java.lang.String",
+    "description": "A description for 'hibernate.hbm2ddl.auto'"
+  },
+  {
+    "name": "port",
+    "type": "java.lang.String",
+    "description": "A description for 'port'"
+  },
+  {
+    "name": "simplejob.frequency",
+    "type": "java.lang.String",
+    "description": "A description for 'simplejob.frequency'"
+  },
+  {
+    "name": "org.quartz.scheduler.instanceId",
+    "type": "java.lang.String",
+    "description": "A description for 'org.quartz.scheduler.instanceId'"
+  },
+  {
+    "name": "org.quartz.scheduler.threadCount",
+    "type": "java.lang.String",
+    "description": "A description for 'org.quartz.scheduler.threadCount'"
+  },
+  {
+    "name": "org.quartz.scheduler.instanceName",
+    "type": "java.lang.String",
+    "description": "A description for 'org.quartz.scheduler.instanceName'"
+  },
+  {
+    "name": "org.quartz.scheduler.threadCount",
+    "type": "java.lang.String",
+    "description": "A description for 'org.quartz.scheduler.threadCount'"
+  },
+  {
+    "name": "org.quartz.scheduler.threadCount",
+    "type": "java.lang.String",
+    "description": "A description for 'org.quartz.scheduler.threadCount'"
+  }
+]}

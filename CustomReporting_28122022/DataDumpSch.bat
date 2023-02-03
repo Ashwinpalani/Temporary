@@ -1,0 +1,1 @@
+java -classpath E:\CustomReporting\CustomReporting\mssql-jdbc-8.4.1.jre8.jar;E:\CustomReporting\CustomReporting\postgresql-42.2.18.jar;.;E:\CustomReporting\CustomReporting; DataLoader >> E:\CustomReporting\CustomReporting\logs\Datadump_%date:~10%%date:~4,2%%date:~7,2%.log 2>&1
