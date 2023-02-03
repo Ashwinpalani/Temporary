@@ -1,0 +1,20 @@
+{
+  "emp_id": 121,
+  "name": "Ashwin",
+  "position": "Java Developer",
+  "address": {
+    "door_no": 2,
+    "village": "Athipadi",
+    "district": "Krishnagiri",
+    "pincode": 951291
+  },
+  "role": [
+    "Developer",
+    "Tester"
+  ],
+  "salary": {
+    "Developer": 300000,
+    "Tester": 200000
+  },
+  "speed": 23
+}

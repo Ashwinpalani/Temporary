@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+	<Properties>
+		<Property name="log-path">D:\CSVlog\</Property>
+		<Property name="log-path">D:\Tutorial\</Property>
+	</Properties>
+	<Appenders>
+
+		<!-- console appender -->
+		<Console name="console-log" target="SYSTEM_OUT">
+			<PatternLayout pattern="%d{dd/MM/yyyy HH:mm:ss:SSS} %5p - %m%n" />
+		</Console>
+
+		<!-- file appender -->
+		<RollingFile name="trace" fileName="${log-path}/trace.log" filePattern="${log-path}/trace-%d{yyyy-MM-dd-HH}.log">
+			<!-- log pattern -->
+			<PatternLayout>
+				<pattern>%d{dd/MM/yyyy HH:mm:ss:SSS} %5p - %m%n</pattern>
+			</PatternLayout>
+
+			<!-- set file size policy -->
+			<Policies>
+				<TimeBasedTriggeringPolicy interval="1" modulate="true" />
+				<!-- <SizeBasedTriggeringPolicy size="1 KB" /> -->
+			</Policies>
+			<DefaultRolloverStrategy max="500" />
+		</RollingFile>
+
+		 <RollingFile name="Customer" fileName="${log-path}/trace.log" filePattern="${log-path}/trace-%d{yyyy-MM-dd-HH}.log">
+			<!-- log pattern -->
+			<PatternLayout>
+				<pattern>%d{dd/MM/yyyy HH:mm:ss:SSS} %5p - %m%n</pattern>
+			</PatternLayout>
+
+			<!-- set file size policy -->
+			<Policies>
+				<TimeBasedTriggeringPolicy interval="1" modulate="true" />
+				<!-- <SizeBasedTriggeringPolicy size="10 MB" /> -->
+			</Policies>
+			<DefaultRolloverStrategy max="500" />
+		</RollingFile>
+		<!-- file appender -->
+		<RollingFile name="Customer" fileName="${log-path}/Customer.log" filePattern="${log-path}/Customer-%d{yyyy-MM-dd-HH}.log">
+			<!-- log pattern -->
+			<PatternLayout>
+				<pattern>%d{dd/MM/yyyy HH:mm:ss:SSS} %5p - %m%n</pattern>
+			</PatternLayout>
+
+			<!-- set file size policy -->
+			<Policies>
+				<TimeBasedTriggeringPolicy interval="1" modulate="true" />
+				<!-- <SizeBasedTriggeringPolicy size="10 MB" /> -->
+			</Policies>
+			<DefaultRolloverStrategy max="2500" />
+		</RollingFile>
+		
+		 <RollingFile name="Tutorial" fileName="${log-path}/Tutorial.log" filePattern="${log-path}/Tutorial-%d{yyyy-MM-dd-HH}.log">
+			<!-- log pattern -->
+			<PatternLayout>
+				<pattern>%d{dd/MM/yyyy HH:mm:ss:SSS} %5p - %m%n</pattern>
+			</PatternLayout>
+
+			<!-- set file size policy -->
+			<Policies>
+				<TimeBasedTriggeringPolicy interval="1" modulate="true" />
+				<!-- <SizeBasedTriggeringPolicy size="10 MB" /> -->
+			</Policies>
+			<DefaultRolloverStrategy max="500" />
+		</RollingFile>
+
+	</Appenders>
+
+	<Loggers>
+		<Logger name="Dialog.Designer.TraceWriter" level="debug" additivity="false">
+			<appender-ref ref="trace" />>
+			
+			<!--	    <appender-ref ref="console-log"/>-->
+		</Logger>
+		<Logger name="Customer" level="debug" additivity="false">
+			<appender-ref ref="Customer" />
+			<appender-ref ref="console-log" />
+		</Logger>
+		
+		<Logger name="Tutorial" level="debug" additivity="false">
+			<appender-ref ref="Tutorial" />
+			<appender-ref ref="console-log" />
+		</Logger>
+		
+		<Logger name="Dialog.Designer.ReportWriter" level="debug" additivity="false">
+			<appender-ref ref="Customer" />
+			<!--	    <appender-ref ref="console-log"/>-->
+		</Logger>
+		
+		<Logger name="Dialog.Designer.ReportWriter" level="debug" additivity="false">
+			<appender-ref ref="Tutorial" />
+			<!--	    <appender-ref ref="console-log"/>-->
+		</Logger>
+		
+		<Root level="debug" additivity="false">
+			<!--        <AppenderRef ref="console-log"/>-->
+		</Root>
+	</Loggers>
+</Configuration>
